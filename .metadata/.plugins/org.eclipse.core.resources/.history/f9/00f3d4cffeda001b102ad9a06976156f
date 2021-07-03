@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="1">
+		<tr>
+			<td>번호</td>
+			<td>이름</td>
+			<td>폰번호</td>
+			<td>주소</td>
+			<td>전자우편</td>
+			<td>관계</td>
+		</tr>
+		<c:forEach items="${list}" var = "dto">
+		<tr>
+			<td><a href="view?seqno=${dto.seqno}">${dto.seqno}</a></td>
+			<td>${dto.name}</td>
+			<td>${dto.telno}</td>
+			<td>${dto.address}</td>
+			<td>${dto.email}</td>
+			<td>${dto.relation}</td>
+		</tr>
+		</c:forEach>
+		
+		<tr>
+			<td colspan="5"><a href="write_view">주소록등록</a></td>
+		</tr>	
+		
+		
+		
+	</table>
+
+</body>
+</html>

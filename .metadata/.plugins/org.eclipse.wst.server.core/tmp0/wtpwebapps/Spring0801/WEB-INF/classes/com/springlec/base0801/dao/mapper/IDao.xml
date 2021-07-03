@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.springlec.base0801.dao.IDao">
+	<select id="listDao" resultType="com.springlec.base0801.dto.ContentDto">
+	       <!-- 대문자로 바꿔주는거 중요!!!!!! [ctrl + shift + x] = 대문자로 바꾸기 / [소문자는 y] -->
+		SELECT * FROM BOARD ORDER BY MID DESC
+	</select>
+	
+	<insert id="writeDao">
+	    <!-- 대문자로 바꿔주는거 중요!!!!!!    대소문자 구분 중요!!!!!!-->
+		INSERT INTO BOARD (MWRITER,MCONTENT) VALUES(#{param1}, #{param2})
+	</insert>
+	
+	<delete id="deleteDao">
+		DELETE FROM BOARD WHERE MID = #{param1} 
+	</delete>
+
+
+</mapper>    

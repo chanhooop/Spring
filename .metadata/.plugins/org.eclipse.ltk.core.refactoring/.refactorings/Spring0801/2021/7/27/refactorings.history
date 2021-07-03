@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Spring0801/src/main/webapp/WEB-INF/views/writeForn.jsp&apos; to &apos;writeForm.jsp&apos;" description="Rename resource &apos;writeForn.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/WEB-INF/views/writeForn.jsp" name="writeForm.jsp" stamp="1625193762273" updateReferences="true"/>
+</session>

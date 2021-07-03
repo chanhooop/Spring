@@ -1,0 +1,44 @@
+package com.springlec.base0801.dto;
+
+public class ContentDto {
+	
+	private int mID;
+	private String mWrite;
+	private String mContent;
+
+	public ContentDto() {
+		
+	}
+
+	public ContentDto(int mID, String mWrite, String mContent) {
+		super();
+		this.mID = mID;
+		this.mWrite = mWrite;
+		this.mContent = mContent;
+	}
+
+	public int getmID() {
+		return mID;
+	}
+
+	public void setmID(int mID) {
+		this.mID = mID;
+	}
+
+	public String getmWrite() {
+		return mWrite;
+	}
+
+	public void setmWrite(String mWrite) {
+		this.mWrite = mWrite;
+	}
+
+	public String getmContent() {
+		return mContent;
+	}
+
+	public void setmContent(String mContent) {
+		this.mContent = mContent;
+	}
+	
+}

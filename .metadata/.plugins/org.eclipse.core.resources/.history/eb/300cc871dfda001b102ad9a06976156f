@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.springlec.base0801.dao.IDao">
+	<select id="listDao" resultType="com.springlec.base0801.dto.ContentDto">
+	<!-- 대문자로 바꿔주는거 중요!!!!!! -->
+		SELECT * FROM BOARD ORDER BY MID DESC
+	</select>
+	
+	<insert id="writeDao">
+	<!-- 대문자로 바꿔주는거 중요!!!!!! -->
+		INSERT INTO BOARD (MWRITER,MCONTENT) VALUES(#{PARAM1}, #{PARAM2})
+	</insert>
+	
+
+
+</mapper>    

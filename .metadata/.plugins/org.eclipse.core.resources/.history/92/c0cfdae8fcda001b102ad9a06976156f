@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="1">
+		<tr>
+			<td>번호</td>
+			<td>이름</td>
+			<td>폰번호</td>
+			<td>주소</td>
+			<td>전자우편</td>
+			<td>관계</td>
+		</tr>
+		<c:forEach items="${list}" var = "dto">
+		<tr>
+			<td>${dto.bId}</td>
+			<td>${dto.bName}</td>
+			<td><a href="content_view?bId=${dto.bId}">${dto.bTitle}</a></td>
+			<td>${dto.bDate}</td>
+		</tr>
+		</c:forEach>
+		
+		<tr>
+			<td colspan="5"><a href="write_view">글작성</a></td>
+		</tr>	
+		
+		
+		
+	</table>
+
+</body>
+</html>

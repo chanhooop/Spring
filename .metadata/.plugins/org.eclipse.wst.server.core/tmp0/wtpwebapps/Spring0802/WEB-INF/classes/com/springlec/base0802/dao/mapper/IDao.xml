@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+    <mapper namespace="com.springlec.base0802.dao.IDao">
+    	<select id="listDao" resultType="com.springlec.base0802.dto.ContentDto">
+    		SELECT * FROM USERINFO ORDER BY SEQNO DESC
+    	</select>
+    
+    	<insert id="writeDao">
+	    <!-- 대문자로 바꿔주는거 중요!!!!!!    대소문자 구분 중요!!!!!!-->
+		INSERT INTO USERINFO (NAME,TELNO,ADDRESS,EMAIL,RELATION) VALUES(#{param1}, #{param2}, #{param3}, #{param4}, #{param5})
+	    </insert>
+	
+		<select id="viewDao" resultType="com.springlec.base0802.dto.ContentDto">
+			SELECT * FROM USERINFO WHERE SEQNO = #{param1}
+		</select>
+		
+		
+		
+		
+		<select id="listQuery" parameterType="String" resultType="com.springlec.base0802.dto.ContentDto" >
+									   <!-- 데이터베이스 칼럼이름은 달러로 표현해야한다!! -->
+			SELECT * FROM USERINFO WHERE ${param1} LIKE CONCAT('%',#{param2},'%')
+		
+		</select>	
+   <!--  select * from userinfo where relation like '%친구%' -->
+    
+    </mapper>
